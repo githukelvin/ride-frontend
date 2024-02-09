@@ -7,9 +7,12 @@ export default defineNuxtConfig({
       enabled: true
     }
   },
-  modules: [
-    '@nuxtjs/eslint-module',
-    '@pinia/nuxt',
-     '@nuxtjs/tailwindcss'
-  ]
+  css: ['~/assets/css/main.css'],
+  modules: ['@nuxtjs/eslint-module', '@pinia/nuxt', '@nuxtjs/tailwindcss'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  }
 })
